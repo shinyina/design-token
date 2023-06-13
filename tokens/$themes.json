@@ -1,0 +1,46 @@
+[
+  {
+    "id": "4152ba0edcb60d36a067c2daf1fdac7f5189a07e",
+    "name": "pc",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "global/core": "source",
+      "global/pc": "enabled"
+    },
+    "group": "search"
+  },
+  {
+    "id": "b13c1a945c921f7bcbb16f080f1a0513318ab9c7",
+    "name": "wise",
+    "$figmaStyleReferences": {
+      ":normal.color-text": "S:7e6d0e33c7c1b379ba70678201fa361962b6774b,"
+    },
+    "selectedTokenSets": {
+      "global/core": "source",
+      "global/wise": "enabled"
+    },
+    "group": "search"
+  },
+  {
+    "id": "ba7e48b255c433f3e1dfcbdaa9bf4479e6dc1d1f",
+    "name": "wise-dark-ios",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "global/core": "source",
+      "global/dark": "enabled",
+      "global/wise": "enabled"
+    },
+    "group": "search"
+  },
+  {
+    "id": "59176bc6de7a767da6daf82ff3e95084ca585600",
+    "name": "wise-night-android",
+    "$figmaStyleReferences": {},
+    "selectedTokenSets": {
+      "global/core": "source",
+      "global/night": "enabled",
+      "global/wise": "enabled"
+    },
+    "group": "search"
+  }
+]
