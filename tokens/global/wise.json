@@ -950,8 +950,8 @@
   "text": {
     "headline-xl": {
       "value": {
-        "lineHeight": "41px",
-        "fontSize": "35px",
+        "lineHeight": "36px",
+        "fontSize": "30px",
         "fontWeight": "{font-medium}"
       },
       "type": "typography"
@@ -967,8 +967,8 @@
     "headline-sm": {
       "value": {
         "fontWeight": "{font-medium}",
-        "lineHeight": "27px",
-        "fontSize": "14px"
+        "lineHeight": "24px",
+        "fontSize": "18px"
       },
       "type": "typography"
     },
