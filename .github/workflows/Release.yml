@@ -1,0 +1,49 @@
+# 整个流程的名字
+name: Release
+
+# 触发时机，在 main 分支 push 操作触发
+on:
+  push:
+    branches:
+      - main
+
+# 默认shell
+defaults:
+  run:
+    shell: bash
+
+# 任务，定义个changelog 的任务
+jobs:
+  changelog:
+    name: Changelog PR or Release
+    # 这里判断仓库owner是否是我自己，为了避免别人 fork 仓库触发，请自行修改
+    # if: ${{ github.repository_owner == 'liruifengv' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@main
+        with:
+          # This makes Actions fetch all Git history so that Changesets can generate changelogs with the correct commits
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.20.3
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: 'pnpm'
+      - name: Install Dependencies
+        run: pnpm install
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          commit: "chore: update versions"
+          title: "chore: update versions"
+          publish: pnpm release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
