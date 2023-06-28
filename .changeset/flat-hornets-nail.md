@@ -2,4 +2,4 @@
 "@shinyina/design-token": patch
 ---
 
-1
+feat: delete test file
