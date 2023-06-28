@@ -1,6 +1,6 @@
 {
   "name": "@shinyina/design-token",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Design Token for Search Components",
   "main": "index.js",
   "scripts": {
