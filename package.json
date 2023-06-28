@@ -1,0 +1,17 @@
+{
+  "name": "@shinyina/design-token",
+  "version": "1.0.0",
+  "description": "Design Token for Search Components",
+  "main": "index.js",
+  "scripts": {
+    "changeset": "changeset",
+    "pre": "changeset pre enter beta",
+    "release": "changeset publish --registry=https://registry.npmjs.com",
+    "version": "changeset version"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2"
+  }
+}
